@@ -3,4 +3,7 @@
 	"base"		    "base"
 	"title"		    "grad"
    	"author"        "whosgotch"
+	"category"		"rp"
+	"maps"			"^rp_"
+	"menusystem"	"1"
 }
