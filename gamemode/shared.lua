@@ -1,2 +1,2 @@
-GM.Name = "grad"
+GM.Name = "prop"
 GM.Author = "whosgotch"

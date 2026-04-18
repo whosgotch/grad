@@ -1,4 +1,4 @@
-grad = grad or {}
+prop = prop or {}
 
 AddCSLuaFile("cl_init.lua")
 AddCSLuaFile("shared.lua")

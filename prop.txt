@@ -1,7 +1,7 @@
-"grad"
+"prop"
 {
 	"base"		    "base"
-	"title"		    "grad"
+	"title"		    "prop"
    	"author"        "whosgotch"
 	"category"		"rp"
 	"maps"			"^rp_"

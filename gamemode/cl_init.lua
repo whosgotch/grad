@@ -1,3 +1,3 @@
-grad = grad or {}
+prop = prop or {}
 
 include("shared.lua")
