@@ -34,8 +34,22 @@ function prop.data.save(ply)
     ))
 end
 
+function prop.data.set(ply, key, value)
+    if not ply.prop then return end 
+
+    if ply.prop[key] == value then return end
+
+    ply.prop[key] = value 
+
+    prop.data.sync(ply, key, value)
+end
+
 function GM:PlayerInitialSpawn(ply)
     prop.data.load(ply)
+
+    for key, value in pairs(ply.prop) do 
+        prop.data.sync(ply, key, value)
+    end
     self.BaseClass.PlayerInitialSpawn(self, ply)
 end
 
