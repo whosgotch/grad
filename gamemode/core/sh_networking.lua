@@ -1,6 +1,7 @@
 prop.net = prop.net or {}
 
 if SERVER then 
+    util.AddNetworkString("prop.ChatBroadcast")
     util.AddNetworkString("prop.DataSync")
 
     function prop.data.sync(ply, key, value)
@@ -11,6 +12,7 @@ if SERVER then
             net.WriteType(value)
         net.Send(ply)
     end
+
 end
 
 if CLIENT then 
@@ -22,5 +24,10 @@ if CLIENT then
         LocalPlayer().prop[key] = value
 
         print(string.format("[prop] Net Sync: %s = %s", key, tostring(value)))
+    end)
+
+    net.Receive("prop.ChatBroadcast", function ()
+        local parts = net.ReadTable()
+        chat.AddText(unpack(parts))
     end)
 end
