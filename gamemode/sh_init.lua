@@ -7,7 +7,7 @@ prop.teams = {stores={}, categories={}}
 prop.spawns = {points={}}
 prop.net = {registry={}}
 prop.data = {fields={}, cache={}}
-prop.commands = {stored={}}
+prop.command = {stored={}}
 prop.state = {registry={}}
 
 print("[prop] Core Tables Initialized...")
